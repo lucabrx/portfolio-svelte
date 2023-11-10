@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/Button.svelte';
 	import { cn } from '$lib/utils';
-	import { ArrowUp } from 'lucide-svelte';
+	import { ChevronUp } from 'lucide-svelte';
 	let isVisible = false;
 
 	function scrollToTop() {
@@ -12,7 +12,7 @@
 	}
 
 	function handleScroll() {
-		isVisible = window.scrollY > 500;
+		isVisible = window.scrollY > 350;
 	}
 </script>
 
@@ -21,10 +21,10 @@
 <Button
 	variant="primary_without_glow"
 	class={cn(
-		'fixed bottom-4 right-4 z-10 flex aspect-square justify-center rounded-md p-0',
+		'fixed bottom-4 right-4 z-10 flex aspect-square h-9 w-9 justify-center rounded-md p-0',
 		isVisible ? 'flex' : 'hidden'
 	)}
 	on:click={scrollToTop}
 >
-	<ArrowUp class="h-4 w-4" />
+	<ChevronUp class="h-5 w-5" />
 </Button>

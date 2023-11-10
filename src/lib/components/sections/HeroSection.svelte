@@ -16,13 +16,13 @@
 
 <div
 	id="home-section"
-	class="flex w-full flex-col items-center justify-center overflow-hidden p-4 pb-28 pt-navigation-height lg:pb-0"
+	class="flex w-full flex-col items-center justify-center overflow-hidden p-4 pb-28 pt-navigation-height lg:mb-10"
 >
 	<div
 		class="xl:gap-15 container grid grid-cols-1 lg:grid-cols-[65%,35%] xl:mt-10 xl:grid-cols-[55%,32%]"
 	>
 		<section
-			class="lg:-mt-30 -mt-2 mb-20 flex flex-col items-start justify-center md:-mt-10 md:mb-10 lg:mb-52 lg:ml-8 xl:-mt-44 xl:mb-[6.5rem] xl:ml-0"
+			class="mb-20 mt-10 flex flex-col items-start justify-center md:mb-20 md:mt-10 lg:-mb-4 lg:-mt-6 lg:ml-8 xl:-mt-0 xl:mb-[6.5rem] xl:ml-0"
 		>
 			<h1
 				class="mb-1 w-full animate-fade-in text-left text-4xl opacity-0 sm:text-center md:text-3xl lg:mb-0 lg:text-left lg:text-4xl xl:text-5xl"
@@ -53,10 +53,10 @@
 		>
 			<div class="max-w-[880px] rounded-md [perspective:2000px]">
 				<div
-					class="relative before:absolute before:-top-44 before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] xl:before:left-16"
+					class="relative before:absolute before:-top-[2.5rem] before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] xl:before:-top-[5.5rem] xl:before:left-16"
 				>
 					<div
-						class="rotate-20 relative -left-10 -top-44 mt-32 flex h-96 lg:mb-0 xl:-top-64 xl:left-16"
+						class="rotate-20 relative -left-10 -top-20 mt-32 flex h-96 lg:mb-0 xl:-top-[10rem] xl:left-16"
 					>
 						<article
 							class="absolute left-[10px] top-[80px] z-20 flex flex-col [perspective:800px] hover:z-40 xl:top-[100px]"

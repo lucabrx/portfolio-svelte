@@ -45,8 +45,8 @@
 		<div class="flex items-center justify-center gap-2">
 			<Button
 				size="md"
-				name="contact link"
-				aria-label={'Link to contact section'}
+				name="contact-link"
+				aria-label="Contact me for inquiries"
 				class="hidden md:block"
 			>
 				Contact me
