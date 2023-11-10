@@ -1,4 +1,4 @@
-@import "fonts.css";
+@import 'fonts.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,10 +37,9 @@ html {
 		--navigation-height: 4.8rem;
 	}
 	html {
-		@apply bg-background  text-off-white font-montserrat-regular;
+		@apply bg-background  font-montserrat-regular text-off-white;
 	}
 }
-
 
 @layer utilities {
 	.text-shadow {

@@ -21,20 +21,20 @@
 			: 'border-b border-transparent-white bg-transparent backdrop-blur-[12px]'
 	)}
 >
-	<div class="container flex items-center justify-between py-2">
+	<div class="container flex items-center justify-between py-3">
 		<div class="flex items-center justify-center gap-4">
 			<button
 				aria-label="Sending user to the top of the page"
 				class="flex items-center"
 				on:click={scrollToTop}
 			>
-				<img src="/logo.svg" alt="logo" class="aspect-square h-10 w-10" />
+				<img src="/logo.svg" alt="logo" class="aspect-square h-8 w-8" />
 			</button>
 			<nav class="hidden md:flex">
 				{#each navigations as { name, section, offset }}
 					<button
 						aria-label={`Link to ${name}`}
-						class="font-montserrat-regular ml-6 text-lg transition-colors hover:text-grey"
+						class="ml-6 font-montserrat-regular text-lg transition-colors hover:text-grey"
 					>
 						{name}
 					</button>
@@ -73,7 +73,8 @@
 						{/each}
 
 						<button
-							aria-label="Sending user to the contact section"
+							role="link"
+							aria-label="Link to contact section"
 							class="flex h-navigation-height w-full items-center border-b border-grey-dark px-4 text-lg transition-colors hover:text-grey"
 						>
 							Contact

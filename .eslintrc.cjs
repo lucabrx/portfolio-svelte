@@ -32,9 +32,8 @@ module.exports = {
 			rules: {
 				'@typescript-eslint/no-unused-vars': 'off',
 				'tailwindcss/classnames-order': 'off',
-				'tailwindcss/no-custom-classname': 'off',
+				'tailwindcss/no-custom-classname': 'off'
 			}
-		},
-
+		}
 	]
 };
