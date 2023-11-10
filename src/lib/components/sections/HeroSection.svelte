@@ -2,11 +2,11 @@
 	import Button from '$lib/components/ui/button/Button.svelte';
 	import HomeImage from '$lib/components/HomeImage.svelte';
 
-	import jimmyDzomlia from '$lib/images/projects/jimmy-dzomlia.png';
-	import iconAi from '$lib/images/projects/icon-ai.png';
-	import quanta from '$lib/images/projects/quanta.png';
-	import webDevTools from '$lib/images/projects/web-dev-tools.png';
-	import voxPopuli from '$lib/images/projects/vox-populi.png';
+	import jimmyDzomlia from '$lib/images/projects/jimmy-dzomlia.webp';
+	import iconAi from '$lib/images/projects/icon-ai.webp';
+	import quanta from '$lib/images/projects/quanta.webp';
+	import webDevTools from '$lib/images/projects/web-dev-tools.webp';
+	import voxPopuli from '$lib/images/projects/vox-populi.webp';
 
 	let jdRect: DOMRect | null = null;
 	let iconAiRect: DOMRect | null = null;
@@ -42,7 +42,7 @@
 			<div
 				class="mt-4 flex w-full animate-fade-in justify-start opacity-0 [--animation-delay:400ms] sm:justify-center md:mt-4 lg:justify-start"
 			>
-				<Button role="link" aria-label="button to contact section" size="lg">Contact 👋</Button>
+				<Button name="link" aria-label="contact section link" size="lg">Contact 👋</Button>
 			</div>
 		</section>
 
