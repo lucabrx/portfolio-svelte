@@ -43,7 +43,7 @@
 		</div>
 
 		<div class="flex items-center justify-center gap-2">
-			<Button size="md" aria-label={'Link to contact section'} class="hidden md:block">
+			<Button size="md" name="link" aria-label={'Link to contact section'} class="hidden md:block">
 				Contact me
 			</Button>
 

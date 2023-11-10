@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/Button.svelte';
-	import HomeImage from '$lib/components/HomeImage.svelte';
 
 	import jimmyDzomlia from '$lib/images/projects/jimmy-dzomlia.webp';
 	import iconAi from '$lib/images/projects/icon-ai.webp';
@@ -10,6 +9,9 @@
 
 	let jdRect: DOMRect | null = null;
 	let iconAiRect: DOMRect | null = null;
+	let quantaRect: DOMRect | null = null;
+	let webDevToolsRect: DOMRect | null = null;
+	let voxPopuliRect: DOMRect | null = null;
 </script>
 
 <div
@@ -53,9 +55,11 @@
 				<div
 					class="relative before:absolute before:-top-44 before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)]"
 				>
-					<div class="rotate-20 relative -left-10 -top-44 mt-32 flex h-96 lg:mb-0 xl:left-20">
+					<div
+						class="rotate-20 relative -left-10 -top-44 mt-32 flex h-96 lg:mb-0 xl:-top-64 xl:left-0"
+					>
 						<article
-							class="absolute top-[80px] z-20 flex flex-col [perspective:800px] hover:z-40 xl:top-[70px]"
+							class="absolute left-[10px] top-[80px] z-20 flex flex-col [perspective:800px] hover:z-40 xl:top-[100px]"
 						>
 							<div
 								role="img"
@@ -75,13 +79,13 @@
 									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
 									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
 								}}
-								class="xl:-[360px] w-[320px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)]"
+								class="w-[320px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[390px]"
 							>
-								<img src={jimmyDzomlia} alt="Jimmy Dzomlia" class="rounded-md" />
+								<img src={jimmyDzomlia} alt="Jimmy Dzomlia Project" class="rounded-md" />
 							</div>
 						</article>
 						<article
-							class="absolute left-[-20px] top-[50px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:top-[70px]"
+							class="absolute left-[-20px] top-[55px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:left-[-30px] xl:top-[85px]"
 						>
 							<div
 								role="img"
@@ -101,9 +105,87 @@
 									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
 									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
 								}}
-								class="xl:-[180px] w-[220px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)]"
+								class="w-[220px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[270px]"
 							>
-								<img src={iconAi} alt="Jimmy Dzomlia" class="rounded-md" />
+								<img src={iconAi} alt="Icon AI Project" class="rounded-md" />
+							</div>
+						</article>
+						<article
+							class="absolute left-[130px] top-[40px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:left-[180px] xl:top-[65px]"
+						>
+							<div
+								role="img"
+								on:mouseleave={() => (quantaRect = null)}
+								on:mouseenter={(e) => (quantaRect = e.currentTarget.getBoundingClientRect())}
+								on:mousemove={(e) => {
+									if (!quantaRect) return;
+									const x = e.clientX - quantaRect.left;
+									const y = e.clientY - quantaRect.top;
+									const xPercentage = x / quantaRect.width;
+									const yPercentage = y / quantaRect.height;
+									const xRotation = (xPercentage - 0.5) * 20;
+									const yRotation = (0.5 - yPercentage) * 20;
+
+									e.currentTarget.style.setProperty('--x-rotation', `${yRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--y-rotation', `${xRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
+									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
+								}}
+								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
+							>
+								<img src={quanta} alt="Quanta Project" class="rounded-md" />
+							</div>
+						</article>
+						<article
+							class="absolute left-[-50px] top-[180px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[-60px] xl:top-[220px]"
+						>
+							<div
+								role="img"
+								on:mouseleave={() => (voxPopuliRect = null)}
+								on:mouseenter={(e) => (voxPopuliRect = e.currentTarget.getBoundingClientRect())}
+								on:mousemove={(e) => {
+									if (!voxPopuliRect) return;
+									const x = e.clientX - voxPopuliRect.left;
+									const y = e.clientY - voxPopuliRect.top;
+									const xPercentage = x / voxPopuliRect.width;
+									const yPercentage = y / voxPopuliRect.height;
+									const xRotation = (xPercentage - 0.5) * 20;
+									const yRotation = (0.5 - yPercentage) * 20;
+
+									e.currentTarget.style.setProperty('--x-rotation', `${yRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--y-rotation', `${xRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
+									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
+								}}
+								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
+							>
+								<img src={voxPopuli} alt="Vox Populi Project" class="rounded-md" />
+							</div>
+						</article>
+						<article
+							class="absolute left-[120px] top-[200px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[150px] xl:top-[200px]"
+						>
+							<div
+								role="img"
+								on:mouseleave={() => (webDevToolsRect = null)}
+								on:mouseenter={(e) => (webDevToolsRect = e.currentTarget.getBoundingClientRect())}
+								on:mousemove={(e) => {
+									if (!webDevToolsRect) return;
+									const x = e.clientX - webDevToolsRect.left;
+									const y = e.clientY - webDevToolsRect.top;
+									const xPercentage = x / webDevToolsRect.width;
+									const yPercentage = y / webDevToolsRect.height;
+									const xRotation = (xPercentage - 0.5) * 20;
+									const yRotation = (0.5 - yPercentage) * 20;
+
+									e.currentTarget.style.setProperty('--x-rotation', `${yRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--y-rotation', `${xRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
+									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
+								}}
+								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
+							>
+								<img src={webDevTools} alt="Web Dev Tools Project" class="rounded-md" />
 							</div>
 						</article>
 					</div>
