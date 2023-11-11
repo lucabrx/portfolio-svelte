@@ -81,13 +81,7 @@
 								}}
 								class="w-[320px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[390px]"
 							>
-								<img
-									src={jimmyDzomlia}
-									alt="Jimmy Dzomlia Project"
-									width="390"
-									height="229"
-									class="rounded-md"
-								/>
+								<img src={jimmyDzomlia} alt="Jimmy Dzomlia Project" class="rounded-md" />
 							</div>
 						</article>
 						<article
@@ -113,13 +107,7 @@
 								}}
 								class="w-[220px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[270px]"
 							>
-								<img
-									src={iconAi}
-									alt="Icon AI Project"
-									class="rounded-md"
-									width="270"
-									height="158"
-								/>
+								<img src={iconAi} alt="Icon AI Project" class="rounded-md" />
 							</div>
 						</article>
 						<article
@@ -145,13 +133,7 @@
 								}}
 								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img
-									src={quanta}
-									alt="Quanta Project"
-									class="rounded-md"
-									height="170"
-									width="290"
-								/>
+								<img src={quanta} alt="Quanta Project" class="rounded-md" />
 							</div>
 						</article>
 						<article
@@ -177,13 +159,7 @@
 								}}
 								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img
-									src={voxPopuli}
-									alt="Vox Populi Project"
-									class="rounded-md"
-									width="290"
-									height="170"
-								/>
+								<img src={voxPopuli} alt="Vox Populi Project" class="rounded-md" />
 							</div>
 						</article>
 						<article
@@ -209,13 +185,7 @@
 								}}
 								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img
-									src={webDevTools}
-									alt="Web Dev Tools Project"
-									class="rounded-md"
-									width="290"
-									height="170"
-								/>
+								<img src={webDevTools} alt="Web Dev Tools Project" class="rounded-md" />
 							</div>
 						</article>
 					</div>

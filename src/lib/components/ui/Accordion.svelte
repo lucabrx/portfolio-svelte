@@ -7,7 +7,7 @@
 
 <div>
 	<button
-		aria-label="toggle accordion"
+		aria-label={`Toggle ${title} accordion`}
 		class="flex w-full cursor-pointer items-center justify-between p-4"
 	>
 		<span class="text-xl font-semibold md:text-2xl">{title}</span>
