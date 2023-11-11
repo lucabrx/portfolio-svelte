@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
 	import { navigations } from '$lib/config/navbar';
-	import { Menu, X } from 'lucide-svelte';
 	import Button from '$lib/components/ui/button/Button.svelte';
+	import {Icons} from '$lib/components/icons';
 	let isOpen = false;
 
 	function scrollToTop() {
@@ -54,9 +54,9 @@
 
 			<button aria-label="toggle user menu" on:click={() => (isOpen = !isOpen)} class="md:hidden">
 				{#if isOpen}
-					<X className="h-8 w-8" />
+					<Icons.X className="h-8 w-8" />
 				{:else}
-					<Menu className="h-8 w-8" />
+					<Icons.Menu className="h-8 w-8" />
 				{/if}
 			</button>
 

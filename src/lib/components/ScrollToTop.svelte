@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/Button.svelte';
 	import { cn } from '$lib/utils';
-	import { ChevronUp } from 'lucide-svelte';
+	import { Icons } from '$lib/components/icons';
 	let isVisible = false;
 
 	function scrollToTop() {
@@ -26,5 +26,5 @@
 	)}
 	on:click={scrollToTop}
 >
-	<ChevronUp class="h-5 w-5" />
+	<Icons.ChevronUp class="h-5 w-5" />
 </Button>

@@ -3,14 +3,16 @@
 	import { dev } from '$app/environment';
 
 	import TailwindIndicator from '$lib/components/TailwindIndicator.svelte';
-	import Navbar from '$lib/components/Navbar.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
+	import Header from "$lib/components/Header.svelte";
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<Navbar />
+<Header />
 <main class="mt-navigation-height">
 	<slot />
 </main>
+<Footer />
 <ScrollToTop />
 {#if dev}
 	<TailwindIndicator />

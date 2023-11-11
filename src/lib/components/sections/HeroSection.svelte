@@ -25,7 +25,7 @@
 			class="mb-20 mt-10 flex flex-col items-start justify-center md:mb-20 md:mt-10 lg:-mb-4 lg:-mt-6 lg:ml-8 xl:-mt-0 xl:mb-[6.5rem] xl:ml-0"
 		>
 			<h1
-				class="mb-1 w-full animate-fade-in text-left text-4xl opacity-0 sm:text-center md:text-3xl lg:mb-0 lg:text-left lg:text-4xl xl:text-5xl"
+				class="xl:text-5 mb-1 w-full animate-fade-in text-left text-4xl opacity-0 sm:text-center md:text-3xl lg:mb-0 lg:text-left lg:text-4xl xl:text-[52px] xl:leading-[60px]"
 			>
 				Hello, I&apos;m <br class="md:hidden" />
 				<span class="bg-title-gradient bg-clip-text text-transparent">Luka Brkovic,</span>
