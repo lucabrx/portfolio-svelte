@@ -5,7 +5,6 @@
 </script>
 
 <HeroSection />
-
 <div
 	class="mask-radial-faded pointer-events-none relative -z-[20] -my-[520px] h-[960px] overflow-hidden [--color:#7877C6] before:absolute
           before:inset-0 before:bg-radial-faded before:opacity-[0.4] after:absolute after:-left-1/2

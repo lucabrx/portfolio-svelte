@@ -85,7 +85,7 @@
 									src={jimmyDzomlia}
 									alt="Jimmy Dzomlia Project"
 									width="390"
-									height="240"
+									height="229"
 									class="rounded-md"
 								/>
 							</div>
@@ -118,7 +118,7 @@
 									alt="Icon AI Project"
 									class="rounded-md"
 									width="270"
-									height="200"
+									height="158"
 								/>
 							</div>
 						</article>
@@ -149,7 +149,7 @@
 									src={quanta}
 									alt="Quanta Project"
 									class="rounded-md"
-									height="210"
+									height="170"
 									width="290"
 								/>
 							</div>
@@ -182,7 +182,7 @@
 									alt="Vox Populi Project"
 									class="rounded-md"
 									width="290"
-									height="210"
+									height="170"
 								/>
 							</div>
 						</article>
@@ -214,7 +214,7 @@
 									alt="Web Dev Tools Project"
 									class="rounded-md"
 									width="290"
-									height="210"
+									height="170"
 								/>
 							</div>
 						</article>
