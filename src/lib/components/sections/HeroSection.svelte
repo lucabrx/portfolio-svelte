@@ -81,7 +81,13 @@
 								}}
 								class="w-[320px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[390px]"
 							>
-								<img src={jimmyDzomlia} alt="Jimmy Dzomlia Project" class="rounded-md" />
+								<img
+									src={jimmyDzomlia}
+									alt="Jimmy Dzomlia Project"
+									width="390"
+									height="240"
+									class="rounded-md"
+								/>
 							</div>
 						</article>
 						<article
@@ -107,7 +113,13 @@
 								}}
 								class="w-[220px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[270px]"
 							>
-								<img src={iconAi} alt="Icon AI Project" class="rounded-md" />
+								<img
+									src={iconAi}
+									alt="Icon AI Project"
+									class="rounded-md"
+									width="270"
+									height="200"
+								/>
 							</div>
 						</article>
 						<article
@@ -133,7 +145,13 @@
 								}}
 								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img src={quanta} alt="Quanta Project" class="rounded-md" />
+								<img
+									src={quanta}
+									alt="Quanta Project"
+									class="rounded-md"
+									height="290"
+									width="210"
+								/>
 							</div>
 						</article>
 						<article
@@ -159,7 +177,13 @@
 								}}
 								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img src={voxPopuli} alt="Vox Populi Project" class="rounded-md" />
+								<img
+									src={voxPopuli}
+									alt="Vox Populi Project"
+									class="rounded-md"
+									width="290"
+									height="210"
+								/>
 							</div>
 						</article>
 						<article
@@ -185,7 +209,13 @@
 								}}
 								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img src={webDevTools} alt="Web Dev Tools Project" class="rounded-md" />
+								<img
+									src={webDevTools}
+									alt="Web Dev Tools Project"
+									class="rounded-md"
+									width="290"
+									height="210"
+								/>
 							</div>
 						</article>
 					</div>
@@ -194,35 +224,3 @@
 		</section>
 	</div>
 </div>
-
-<!--
- const ref = useRef<DOMRect | null>(null);
-<div className={cn("flex flex-col absolute [perspective:800px]", className)}>
-	<div
-			onMouseLeave={() => ref.current = null}
-			onMouseEnter={(e) => ref.current = e.currentTarget.getBoundingClientRect()}
-			onMouseMove={(e) => {
-                       if (!ref.current) return;
-                       const x = e.clientX - ref.current.left;
-                       const y = e.clientY - ref.current.top;
-                       const xPercentage = x / ref.current.width;
-                       const yPercentage = y / ref.current.height;
-                       const xRotation = (xPercentage - 0.5) * 20;
-                       const yRotation = (0.5 - yPercentage) * 20;
-
-                       e.currentTarget.style.setProperty("--x-rotation", `${yRotation}deg`);
-                       e.currentTarget.style.setProperty("--y-rotation", `${xRotation}deg`);
-                       e.currentTarget.style.setProperty("--x", `${xPercentage * 200}%`);
-                       e.currentTarget.style.setProperty("--y", `${yPercentage * 200}%`);
-                   }}
-			className="transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] rounded-md  border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient">
-		<Image
-				src={src}
-				alt="Picture of the author"
-				width={width}
-				height={height}
-				className="rounded-md delay-[650ms] hover:z-[150]"
-		/>
-	</div>
-</div>
--->

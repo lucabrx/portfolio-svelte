@@ -5,6 +5,7 @@
 
 html {
 	scroll-behavior: smooth;
+	font-family: "Montserrat Regular", sans-serif;
 }
 
 .rotate-20 {
@@ -37,7 +38,7 @@ html {
 		--navigation-height: 3rem;
 	}
 	html {
-		@apply bg-background  font-montserrat-regular text-off-white;
+		@apply bg-background text-off-white;
 	}
 }
 
