@@ -2,6 +2,7 @@
 	import StarsIllustration from '$lib/components/StarsIllustration.svelte';
 	import HeroSection from '$lib/components/sections/HeroSection.svelte';
 	import SkillSection from '$lib/components/sections/SkillSection.svelte';
+	import ContactSection from '$lib/components/sections/ContactSection.svelte';
 </script>
 
 <HeroSection />
@@ -13,3 +14,4 @@
 	<StarsIllustration />
 </div>
 <SkillSection />
+<ContactSection />

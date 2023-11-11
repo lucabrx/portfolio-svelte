@@ -40,6 +40,9 @@ html {
 	html {
 		@apply bg-background text-off-white;
 	}
+	body {
+		@apply bg-page-gradient;
+	}
 }
 
 @layer utilities {

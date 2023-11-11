@@ -4,7 +4,7 @@
 
 	import TailwindIndicator from '$lib/components/TailwindIndicator.svelte';
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
-	import Header from "$lib/components/Header.svelte";
+	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
