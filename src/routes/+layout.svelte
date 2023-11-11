@@ -10,7 +10,6 @@
 <Navbar />
 <main class="mt-navigation-height">
 	<slot />
-	<div class="h-[9000px] w-full"></div>
 </main>
 <ScrollToTop />
 {#if dev}
