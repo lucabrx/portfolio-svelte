@@ -149,8 +149,8 @@
 									src={quanta}
 									alt="Quanta Project"
 									class="rounded-md"
-									height="290"
-									width="210"
+									height="210"
+									width="290"
 								/>
 							</div>
 						</article>

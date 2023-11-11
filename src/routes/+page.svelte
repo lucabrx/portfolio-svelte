@@ -12,5 +12,5 @@
           after:top-1/2 after:h-[42.8%] after:w-[200%] after:rounded-[50%] after:border-t after:border-[rgba(120,_119,_198,_0.4)] after:bg-background md:-my-[570px] md:after:h-[142.8%] xl:h-[1020px]"
 >
 	<StarsIllustration />
-	<SkillSection />
 </div>
+<SkillSection />
