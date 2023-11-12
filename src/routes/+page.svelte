@@ -3,6 +3,7 @@
 	import HeroSection from '$lib/components/sections/HeroSection.svelte';
 	import SkillSection from '$lib/components/sections/SkillSection.svelte';
 	import ContactSection from '$lib/components/sections/ContactSection.svelte';
+	import AboutSection from '$lib/components/sections/AboutSection.svelte';
 	import type { ActionData } from './$types';
 
 	export let form: ActionData;
@@ -17,4 +18,5 @@
 	<StarsIllustration />
 </div>
 <SkillSection />
+<AboutSection />
 <ContactSection {form} />

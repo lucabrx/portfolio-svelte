@@ -16,10 +16,10 @@
 
 <div
 	id="home-section"
-	class="flex w-full flex-col items-center justify-center overflow-hidden p-4 pb-36 pt-navigation-height lg:-mt-12 lg:mb-10"
+	class="flex w-full flex-col items-center justify-center overflow-hidden p-4 pb-36 pt-navigation-height -mt-12 lg:mb-10"
 >
 	<div
-		class="xl:gap-15 container grid grid-cols-1 lg:mt-10 lg:grid-cols-[65%,35%] xl:-mb-4 xl:mt-28 xl:grid-cols-[55%,32%]"
+		class="xl:gap-15 container grid grid-cols-1 mt-16 -mb-10 sm:mb-0 lg:mt-10 lg:grid-cols-[65%,35%] xl:-mb-4 xl:mt-28 xl:grid-cols-[55%,32%]"
 	>
 		<section
 			class="mb-20 mt-10 flex flex-col items-start justify-center md:mb-20 md:mt-10 lg:-mb-4 lg:-mt-6 lg:ml-8 xl:-mt-0 xl:mb-[6.5rem] xl:ml-0"
@@ -51,9 +51,9 @@
 		<section
 			class="mt-6 hidden animate-fade-in opacity-0 [--animation-delay:700ms] lg:mt-4 lg:block"
 		>
-			<div class="max-w-[880px] rounded-md [perspective:2000px]">
+			<div class="max-w-[1000px] rounded-md [perspective:2000px]">
 				<div
-					class="relative before:absolute before:-top-[2.5rem] before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] xl:before:-top-[5.5rem] xl:before:left-24"
+					class="relative before:absolute before:-top-[2.5rem] before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0  before:[filter:blur(120px)] xl:before:-top-[5.5rem] xl:before:left-24"
 				>
 					<div
 						class="rotate-20 relative -left-10 -top-20 mt-32 flex h-96 lg:mb-0 xl:-top-[11rem] xl:left-16"
