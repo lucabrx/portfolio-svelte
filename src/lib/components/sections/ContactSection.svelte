@@ -13,7 +13,7 @@
 <section id="contact-section" class="mt-8 flex w-full flex-1 flex-col md:mt-8">
 	<h2
 		class={cn(
-			'self-startpt-8 w-full pb-2 text-center text-3xl font-semibold md:pb-4 md:pt-12 lg:pb-8 lg:text-4xl'
+			  "w-full pt-8 md:pt-12 md:pb-4 text-center text-3xl font-semibold lg:text-4xl",
 		)}
 	>
 		Say Hello 🤝

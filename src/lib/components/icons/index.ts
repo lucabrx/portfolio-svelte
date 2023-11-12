@@ -1,4 +1,4 @@
-import {Menu,X,ChevronUp, Facebook,Linkedin, Send, Github} from "lucide-svelte"
+import {Menu,X,ChevronUp, Facebook,Linkedin, Send, Github, ChevronLeft, ChevronRight} from "lucide-svelte"
 
 export const Icons = {
     Menu,
@@ -7,5 +7,7 @@ export const Icons = {
     Facebook,
     Telegram: Send,
     Linkedin,
-    Github
+    Github,
+    Left: ChevronLeft,
+    Right: ChevronRight,
 }

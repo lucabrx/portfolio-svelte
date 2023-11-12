@@ -5,7 +5,7 @@
 </script>
 
 <section id="skills-section" class="container mt-[100px] md:mt-[140px] lg:mt-[160px]">
-	<h2 class={cn('mb-6 w-full text-center text-3xl font-semibold lg:text-4xl')}>
+	<h2 class={cn('mb-2 w-full text-center text-3xl font-semibold lg:text-4xl')}>
 		Thing&apos;s I do 👋
 	</h2>
 	<p class={cn('container mt-6 text-center text-off-white/70 lg:hidden')}>
