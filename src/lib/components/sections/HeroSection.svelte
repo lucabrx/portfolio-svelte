@@ -1,11 +1,11 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/Button.svelte';
 
-	import jimmyDzomlia from '$lib/images/hero/jimmy-dzomlia.webp';
-	import iconAi from '$lib/images/hero/icon-ai.webp';
-	import quanta from '$lib/images/hero/quanta.webp';
-	import webDevTools from '$lib/images/hero/web-dev-tools.webp';
-	import voxPopuli from '$lib/images/hero/vox-populi.webp';
+	import jimmyDzomlia from '$lib/images/projects/jimmy-dzomlia.webp';
+	import iconAi from '$lib/images/projects/icon-ai.webp';
+	import quanta from '$lib/images/projects/quanta.webp';
+	import webDevTools from '$lib/images/projects/web-dev-tools.webp';
+	import voxPopuli from '$lib/images/projects/vox-populi.webp';
 	import { scrollToSection } from '$lib/utils';
 
 	let jdRect: DOMRect | null = null;
@@ -55,14 +55,14 @@
 		</section>
 
 		<section
-			class="mt-6 hidden animate-fade-in opacity-0 [--animation-delay:700ms] lg:mt-4 lg:block"
+			class="mt-6 hidden animate-fade-in opacity-0 [--animation-delay:700ms] lg:mt-6 lg:block"
 		>
 			<div class="max-w-[1000px] rounded-md [perspective:2000px]">
 				<div
 					class="relative before:absolute before:-top-[2.5rem] before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] xl:before:-top-[5.5rem] xl:before:left-24"
 				>
 					<div
-						class="rotate-20 relative -left-10 -top-20 mt-32 flex h-96 lg:mb-0 xl:-top-[11rem] xl:left-16"
+						class="rotate-20 relative -left-10 -top-20 mt-32 flex h-96 lg:mb-0 xl:-top-[10.5rem] xl:left-16"
 					>
 						<article
 							class="absolute left-[10px] top-[80px] z-20 flex flex-col [perspective:800px] hover:z-40 xl:top-[100px]"
@@ -88,7 +88,13 @@
 								}}
 								class="w-[320px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[390px]"
 							>
-								<img src={jimmyDzomlia} alt="Jimmy Dzomlia Project" class="rounded-md" />
+								<img
+									src={jimmyDzomlia}
+									alt="Jimmy Dzomlia Project"
+									class="rounded-md"
+									width="389"
+									height="384"
+								/>
 							</a>
 						</article>
 						<article
@@ -115,7 +121,13 @@
 								}}
 								class="w-[220px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[270px]"
 							>
-								<img src={iconAi} alt="Icon AI Project" class="rounded-md" />
+								<img
+									src={iconAi}
+									alt="Icon AI Project"
+									class="rounded-md"
+									width="270px"
+									height="152"
+								/>
 							</a>
 						</article>
 						<article
@@ -142,7 +154,13 @@
 								}}
 								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img src={quanta} alt="Quanta Project" class="rounded-md" />
+								<img
+									src={quanta}
+									alt="Quanta Project"
+									class="rounded-md"
+									width="290"
+									height="164"
+								/>
 							</a>
 						</article>
 						<article
@@ -169,7 +187,13 @@
 								}}
 								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img src={voxPopuli} alt="Vox Populi Project" class="rounded-md" />
+								<img
+									src={voxPopuli}
+									alt="Vox Populi Project"
+									class="rounded-md"
+									width="290"
+									height="164"
+								/>
 							</a>
 						</article>
 						<article
@@ -196,7 +220,13 @@
 								}}
 								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
-								<img src={webDevTools} alt="Web Dev Tools Project" class="rounded-md" />
+								<img
+									src={webDevTools}
+									alt="Web Dev Tools Project"
+									class="rounded-md"
+									width="290"
+									height="164"
+								/>
 							</a>
 						</article>
 					</div>
