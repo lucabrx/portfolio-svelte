@@ -1,14 +1,7 @@
 <script lang="ts">
-	import { cn, emailSchema } from '$lib/utils';
+	import { cn } from '$lib/utils';
 	import letter from '$lib/images/contact.svg';
-	import Button from '$lib/components/ui/button/Button.svelte';
-	import { enhance } from '$app/forms';
-	import type { ActionData } from '../../../routes/$types';
 	import { onMount } from 'svelte';
-
-	export let form: ActionData;
-
-	$: console.log(form);
 
 	let viewport: HTMLElement;
 	let isInView = false;
@@ -66,54 +59,7 @@
 				isInView && 'animate-fade-in [--animation-delay:300ms]'
 			)}
 		>
-			<form use:enhance method="POST" class="flex w-full flex-col space-y-4">
-				<div class="relative flex w-full flex-col space-y-2">
-					<label for="name" class="text-lg">Name</label>
-					<input
-						name="name"
-						type="text"
-						placeholder="Yana Doe"
-						aria-label="enter your name"
-						class={cn(
-							'bg-off-whit text-md rounded-md border-none p-2 text-grey-dark outline-none  transition-colors duration-300 focus:ring-2 focus:ring-[#4f46e5]'
-						)}
-					/>
-				</div>
-				<div class="relative flex w-full flex-col space-y-2">
-					<label for="email" class="text-lg">Email</label>
-					<input
-						name="email"
-						type="text"
-						aria-label="enter your email"
-						placeholder="yanadoe@example.com"
-						class={cn(
-							'bg-off-whit text-md rounded-md border-none p-2 text-grey-dark outline-none  transition-colors duration-300 focus:ring-2 focus:ring-[#4f46e5]'
-						)}
-					/>
-				</div>
-				<div class="relative flex w-full flex-col space-y-2 pb-2">
-					<label for="message" class="text-lg">Message</label>
-
-					<textarea
-						name="message"
-						placeholder="Your amazing message..."
-						aria-label="enter your message"
-						class={cn(
-							'hide-scrollbar text-md h-32 resize-none overflow-y-scroll rounded-md border-none bg-off-white p-2 text-grey-dark outline-none transition-colors duration-300 focus:ring-2 focus:ring-[#4f46e5] md:h-[200px]'
-						)}
-					/>
-				</div>
-
-				<Button
-					type="submit"
-					aria-label="send message button"
-					class="w-full md:w-auto md:self-end "
-					size="lg"
-				>
-					<span class="mr-2">✍️</span>
-					Send Message
-				</Button>
-			</form>
+			<slot />
 		</div>
 	</div>
 </section>

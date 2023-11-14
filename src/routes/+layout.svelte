@@ -6,7 +6,10 @@
 	import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import ToastProvider from '$lib/components/ToastProvider.svelte';
 </script>
+
+<ToastProvider />
 
 <Header />
 <main class="mt-navigation-height">

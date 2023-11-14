@@ -7,7 +7,8 @@ import {
 	Send,
 	Github,
 	ChevronLeft,
-	ChevronRight
+	ChevronRight,
+	Loader2
 } from 'lucide-svelte';
 import Docker from '$lib/components/icons/Docker.svelte';
 import Node from '$lib/components/icons/Node.svelte';
@@ -36,5 +37,6 @@ export const Icons = {
 	Svelte,
 	Figma,
 	Sql,
-	Aws
+	Aws,
+	Loader2
 };
