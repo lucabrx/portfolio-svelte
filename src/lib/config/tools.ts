@@ -1,14 +1,13 @@
-import { Bean } from 'lucide-svelte';
-
+import { Icons } from '$lib/components/icons';
 export const frontendTools = [
-	{ text: 'React', Icon: Bean },
-	{ text: 'Next.js', Icon: Bean },
-	{ text: 'Svelte', Icon: Bean }
+	{ text: 'React', Icon: Icons.React },
+	{ text: 'Next.js', Icon: Icons.Next },
+	{ text: 'Svelte', Icon: Icons.Svelte }
 ];
 export const backendTools = [
-	{ text: 'Mongo', Icon: Bean },
-	{ text: 'SQL', Icon: Bean },
-	{ text: 'Docker', Icon: Bean },
-	{ text: 'Fastify', Icon: Bean }
+	{ text: 'Docker', Icon: Icons.Docker },
+	{ text: 'Golang', Icon: Icons.Golang },
+	{ text: 'Node', Icon: Icons.Node },
+	{ text: 'SQL', Icon: Icons.Sql }
 ];
-export const designTools = [{ text: 'Figma', Icon: Bean }];
+export const designTools = [{ text: 'Figma', Icon: Icons.Figma }];
