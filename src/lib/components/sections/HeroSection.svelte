@@ -67,8 +67,9 @@
 						<article
 							class="absolute left-[10px] top-[80px] z-20 flex flex-col [perspective:800px] hover:z-40 xl:top-[100px]"
 						>
-							<div
-								role="img"
+							<a
+								href="https://fitness-coach-jimmy-dzomlia.vercel.app/"
+								aria-label="link to Jimmy Dzomlia project"
 								on:mouseleave={() => (jdRect = null)}
 								on:mouseenter={(e) => (jdRect = e.currentTarget.getBoundingClientRect())}
 								on:mousemove={(e) => {
@@ -85,16 +86,17 @@
 									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
 									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
 								}}
-								class="w-[320px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[390px]"
+								class="w-[320px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[390px]"
 							>
 								<img src={jimmyDzomlia} alt="Jimmy Dzomlia Project" class="rounded-md" />
-							</div>
+							</a>
 						</article>
 						<article
 							class="absolute left-[-20px] top-[55px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:left-[-30px] xl:top-[85px]"
 						>
-							<div
-								role="img"
+							<a
+								href="https://icon-ai-ughw.vercel.app/"
+								aria-label="link to Icon AI project"
 								on:mouseleave={() => (iconAiRect = null)}
 								on:mouseenter={(e) => (iconAiRect = e.currentTarget.getBoundingClientRect())}
 								on:mousemove={(e) => {
@@ -111,16 +113,17 @@
 									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
 									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
 								}}
-								class="w-[220px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[270px]"
+								class="w-[220px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[270px]"
 							>
 								<img src={iconAi} alt="Icon AI Project" class="rounded-md" />
-							</div>
+							</a>
 						</article>
 						<article
 							class="absolute left-[130px] top-[40px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:left-[180px] xl:top-[65px]"
 						>
-							<div
-								role="img"
+							<a
+								href="https://quanta-ai-next.vercel.app/"
+								aria-label="link to Quanta project"
 								on:mouseleave={() => (quantaRect = null)}
 								on:mouseenter={(e) => (quantaRect = e.currentTarget.getBoundingClientRect())}
 								on:mousemove={(e) => {
@@ -137,16 +140,17 @@
 									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
 									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
 								}}
-								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
+								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
 								<img src={quanta} alt="Quanta Project" class="rounded-md" />
-							</div>
+							</a>
 						</article>
 						<article
 							class="absolute left-[-50px] top-[180px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[-60px] xl:top-[220px]"
 						>
-							<div
-								role="img"
+							<a
+								href="https://vox-populiv3.vercel.app/"
+								aria-label="link to Vox Populi project"
 								on:mouseleave={() => (voxPopuliRect = null)}
 								on:mouseenter={(e) => (voxPopuliRect = e.currentTarget.getBoundingClientRect())}
 								on:mousemove={(e) => {
@@ -163,16 +167,17 @@
 									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
 									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
 								}}
-								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
+								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
 								<img src={voxPopuli} alt="Vox Populi Project" class="rounded-md" />
-							</div>
+							</a>
 						</article>
 						<article
 							class="absolute left-[120px] top-[200px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[150px] xl:top-[200px]"
 						>
-							<div
-								role="img"
+							<a
+								href="https://wd-tool.vercel.app/"
+								aria-label="link to Web Dev Tools project"
 								on:mouseleave={() => (webDevToolsRect = null)}
 								on:mouseenter={(e) => (webDevToolsRect = e.currentTarget.getBoundingClientRect())}
 								on:mousemove={(e) => {
@@ -189,10 +194,10 @@
 									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
 									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
 								}}
-								class="w-[240px] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
+								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
 							>
 								<img src={webDevTools} alt="Web Dev Tools Project" class="rounded-md" />
-							</div>
+							</a>
 						</article>
 					</div>
 				</div>
