@@ -2,9 +2,9 @@ import type { Actions, PageServerLoad } from './$types';
 import { z } from 'zod';
 import { superValidate } from 'sveltekit-superforms/server';
 import { Resend } from 'resend';
-import { ENV } from '$lib/server/env';
+import { RESEND_API_KEY } from '$env/static/private';
 
-const resend = new Resend(ENV.RESEND_API_KEY);
+const resend = new Resend(RESEND_API_KEY);
 const emailSchema = z.object({
 	name: z.string(),
 	email: z.string().email('Please provide an valid email address'),
