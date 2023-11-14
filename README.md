@@ -17,4 +17,3 @@ pnpm run dev
 - [Vercel](https://www.vercel.com/)
 - [Typescript](https://www.typescriptlang.org/)
 
-![Alt text](cover.png)
