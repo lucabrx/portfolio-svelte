@@ -5,9 +5,10 @@ export const frontendTools = [
 	{ text: 'Svelte', Icon: Icons.Svelte }
 ];
 export const backendTools = [
-	{ text: 'Docker', Icon: Icons.Docker },
 	{ text: 'Golang', Icon: Icons.Golang },
 	{ text: 'Node', Icon: Icons.Node },
-	{ text: 'SQL', Icon: Icons.Sql }
+	{ text: 'SQL', Icon: Icons.Sql },
+	{ text: 'Docker', Icon: Icons.Docker },
+	{ text: 'AWS', Icon: Icons.Aws }
 ];
 export const designTools = [{ text: 'Figma', Icon: Icons.Figma }];

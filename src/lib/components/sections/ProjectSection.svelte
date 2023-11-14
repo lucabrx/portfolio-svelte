@@ -5,6 +5,7 @@
 	import { Icons } from '$lib/components/icons';
 	import { buttonVariants } from '../ui/button';
 	import { Badge } from '$lib/components/ui/badge';
+	import { onMount } from 'svelte';
 
 	let scrollContainer: HTMLElement;
 
@@ -33,18 +34,56 @@
 			});
 		}
 	}
+
+	let viewport: HTMLElement;
+	let isInView = false;
+	let hasAnimated = false;
+
+	function handleResize() {
+		if (viewport && !hasAnimated) {
+			const rect = viewport.getBoundingClientRect();
+			const sectionHeight = viewport.offsetHeight;
+			const triggerPoint = sectionHeight * 0.5;
+			isInView = rect.top < window.innerHeight - triggerPoint && rect.bottom >= 0;
+
+			if (isInView) {
+				hasAnimated = true;
+			}
+		}
+	}
+
+	onMount(() => {
+		window.addEventListener('scroll', handleResize);
+
+		return () => {
+			window.removeEventListener('scroll', handleResize);
+		};
+	});
 </script>
 
-<section id="projects-section" class="container mt-6 pb-4 md:mt-10 md:pb-8 lg:mt-16">
-	<h2 class={cn('w-full pt-4 text-center text-3xl font-semibold  md:pb-4 md:pt-6 lg:text-4xl')}>
+<svelte:window on:resize={handleResize} />
+<section
+	bind:this={viewport}
+	id="projects-section"
+	class="container mt-6 pb-4 md:mt-10 md:pb-8 lg:mt-16"
+>
+	<h2
+		class={cn(
+			'w-full pt-4 text-center text-3xl font-semibold opacity-0 md:pb-4 md:pt-6 lg:text-4xl',
+			isInView && 'animate-fade-in [--animation-delay:100ms]'
+		)}
+	>
 		My Projects 👨‍💻
 	</h2>
-	<div class="hide-scrollbar relative mt-4 flex gap-6 overflow-x-auto">
+	<div
+		class={cn(
+			'hide-scrollbar relative mt-4 flex gap-6 overflow-x-auto opacity-0',
+			isInView && 'animate-fade-in [--animation-delay:300ms]'
+		)}
+	>
 		<div
 			bind:this={scrollContainer}
-			class={cn(
-				'hide-scrollbar flex transform gap-4 overflow-x-scroll px-5 py-6 transition-transform md:gap-7 md:px-0'
-			)}
+			class="hide-scrollbar flex transform gap-4 overflow-x-scroll px-5 py-6 transition-transform md:gap-7 md:px-0"
 		>
 			{#each projects as { title, description, image, badges, mainBadge, github, link }}
 				<div

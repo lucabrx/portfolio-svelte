@@ -4,16 +4,45 @@
 	import Button from '$lib/components/ui/button/Button.svelte';
 	import { enhance } from '$app/forms';
 	import type { ActionData } from '../../../routes/$types';
+	import { onMount } from 'svelte';
 
 	export let form: ActionData;
 
 	$: console.log(form);
+
+	let viewport: HTMLElement;
+	let isInView = false;
+	let hasAnimated = false;
+
+	function handleResize() {
+		if (viewport && !hasAnimated) {
+			const rect = viewport.getBoundingClientRect();
+			const sectionHeight = viewport.offsetHeight;
+			const triggerPoint = sectionHeight * 0.5;
+			isInView = rect.top < window.innerHeight - triggerPoint && rect.bottom >= 0;
+
+			if (isInView) {
+				hasAnimated = true;
+			}
+		}
+	}
+
+	onMount(() => {
+		window.addEventListener('scroll', handleResize);
+
+		return () => {
+			window.removeEventListener('scroll', handleResize);
+		};
+	});
 </script>
 
-<section id="contact-section" class="mt-8 flex w-full flex-1 flex-col md:mt-8">
+<svelte:window on:resize={handleResize} />
+
+<section bind:this={viewport} id="contact-section" class="mt-8 flex w-full flex-1 flex-col md:mt-8">
 	<h2
 		class={cn(
-			  "w-full pt-8 md:pt-12 md:pb-4 text-center text-3xl font-semibold lg:text-4xl",
+			'w-full pt-8 text-center text-3xl font-semibold opacity-0 md:pb-4 md:pt-12 lg:text-4xl',
+			isInView && 'animate-fade-in [--animation-delay:100ms]'
 		)}
 	>
 		Say Hello 🤝
@@ -26,11 +55,17 @@
 			alt="portrait"
 			aria-label="image of email"
 			class={cn(
-				'hidden h-full  max-h-[26.25rem] w-full max-w-[26.25rem] rounded-md drop-shadow-sm md:block'
+				'hidden h-full max-h-[26.25rem] w-full max-w-[26.25rem] rounded-md opacity-0 drop-shadow-sm md:block',
+				isInView && 'animate-fade-in [--animation-delay:300ms]'
 			)}
 		/>
 
-		<div class={cn('flex w-full flex-col items-center justify-center')}>
+		<div
+			class={cn(
+				'flex w-full flex-col items-center justify-center opacity-0',
+				isInView && 'animate-fade-in [--animation-delay:300ms]'
+			)}
+		>
 			<form use:enhance method="POST" class="flex w-full flex-col space-y-4">
 				<div class="relative flex w-full flex-col space-y-2">
 					<label for="name" class="text-lg">Name</label>

@@ -17,6 +17,7 @@ import Svelte from '$lib/components/icons/Svelte.svelte';
 import Figma from '$lib/components/icons/Figma.svelte';
 import Sql from '$lib/components/icons/Sql.svelte';
 import Golang from '$lib/components/icons/Golang.svelte';
+import Aws from '$lib/components/icons/Aws.svelte';
 export const Icons = {
 	Menu,
 	X,
@@ -34,5 +35,6 @@ export const Icons = {
 	React,
 	Svelte,
 	Figma,
-	Sql
+	Sql,
+	Aws
 };
