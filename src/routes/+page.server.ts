@@ -5,7 +5,7 @@ import { Resend } from 'resend';
 import { ENV } from '$lib/server/env';
 
 const resend = new Resend(ENV.RESEND_API_KEY);
-export const emailSchema = z.object({
+const emailSchema = z.object({
 	name: z.string(),
 	email: z.string().email('Please provide an valid email address'),
 	message: z.string().min(20, 'Please provide at least 20 characters long message')
