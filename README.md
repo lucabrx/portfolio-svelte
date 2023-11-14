@@ -16,4 +16,3 @@ pnpm run dev
 - [TailwindCSS](https://tailwindcss.com/)
 - [Vercel](https://www.vercel.com/)
 - [Typescript](https://www.typescriptlang.org/)
-
