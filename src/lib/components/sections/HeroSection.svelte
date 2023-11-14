@@ -1,11 +1,11 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/Button.svelte';
 
-	import jimmyDzomlia from '$lib/images/projects/jimmy-dzomlia.webp';
-	import iconAi from '$lib/images/projects/icon-ai.webp';
-	import quanta from '$lib/images/projects/quanta.webp';
-	import webDevTools from '$lib/images/projects/web-dev-tools.webp';
-	import voxPopuli from '$lib/images/projects/vox-populi.webp';
+	import jimmyDzomlia from '$lib/images/hero/jimmy-dzomlia.webp';
+	import iconAi from '$lib/images/hero/icon-ai.webp';
+	import quanta from '$lib/images/hero/quanta.webp';
+	import webDevTools from '$lib/images/hero/web-dev-tools.webp';
+	import voxPopuli from '$lib/images/hero/vox-populi.webp';
 	import { scrollToSection } from '$lib/utils';
 
 	let jdRect: DOMRect | null = null;
