@@ -2,7 +2,8 @@
 	import { cn } from '$lib/utils';
 	import { navigations } from '$lib/config/navbar';
 	import Button from '$lib/components/ui/button/Button.svelte';
-	import {Icons} from '$lib/components/icons';
+	import { Icons } from '$lib/components/icons';
+	import { scrollToSection } from '$lib/utils';
 	let isOpen = false;
 
 	function scrollToTop() {
@@ -33,6 +34,7 @@
 			<nav class="hidden md:flex">
 				{#each navigations as { name, section, offset }}
 					<button
+						on:click={(e) => scrollToSection(e, section, offset)}
 						aria-label={`Link to ${name}`}
 						class="ml-6 font-montserrat-regular text-lg transition-colors hover:text-grey"
 					>
@@ -48,6 +50,7 @@
 				name="contact-link"
 				aria-label="Contact me for inquiries"
 				class="hidden md:block"
+				on:click={(e) => scrollToSection(e, 'contact-section', 0)}
 			>
 				Contact me
 			</Button>
@@ -70,6 +73,10 @@
 					<div class="flex flex-col space-y-2 py-4">
 						{#each navigations as { name, section, offset }}
 							<button
+								on:click={(e) => {
+									scrollToSection(e, section, offset);
+									isOpen = false;
+								}}
 								aria-label={`Sending user to the  ${name}`}
 								class="flex h-navigation-height w-full items-center border-b border-grey-dark px-4 text-lg transition-colors hover:text-grey"
 							>
@@ -78,6 +85,10 @@
 						{/each}
 
 						<button
+							on:click={(e) => {
+								scrollToSection(e, 'contact-section', 0);
+								isOpen = false;
+							}}
 							role="link"
 							aria-label="Link to contact section"
 							class="flex h-navigation-height w-full items-center border-b border-grey-dark px-4 text-lg transition-colors hover:text-grey"

@@ -6,6 +6,7 @@
 	import quanta from '$lib/images/projects/quanta.webp';
 	import webDevTools from '$lib/images/projects/web-dev-tools.webp';
 	import voxPopuli from '$lib/images/projects/vox-populi.webp';
+	import { scrollToSection } from '$lib/utils';
 
 	let jdRect: DOMRect | null = null;
 	let iconAiRect: DOMRect | null = null;
@@ -14,12 +15,12 @@
 	let voxPopuliRect: DOMRect | null = null;
 </script>
 
-<div
+<section
 	id="home-section"
-	class="flex w-full flex-col items-center justify-center overflow-hidden p-4 pb-36 pt-navigation-height -mt-12 lg:mb-10"
+	class="-mt-12 flex w-full flex-col items-center justify-center overflow-hidden p-4 pb-36 pt-navigation-height lg:mb-10"
 >
 	<div
-		class="xl:gap-15 container grid grid-cols-1 mt-16 -mb-10 sm:mb-0 lg:mt-10 lg:grid-cols-[65%,35%] xl:-mb-4 xl:mt-28 xl:grid-cols-[55%,32%]"
+		class="xl:gap-15 container -mb-10 mt-16 grid grid-cols-1 sm:mb-0 lg:mt-10 lg:grid-cols-[65%,35%] xl:-mb-4 xl:mt-28 xl:grid-cols-[55%,32%]"
 	>
 		<section
 			class="mb-20 mt-10 flex flex-col items-start justify-center md:mb-20 md:mt-10 lg:-mb-4 lg:-mt-6 lg:ml-8 xl:-mt-0 xl:mb-[6.5rem] xl:ml-0"
@@ -44,7 +45,12 @@
 			<div
 				class="mt-8 flex w-full animate-fade-in justify-start opacity-0 [--animation-delay:400ms] sm:justify-center lg:justify-start"
 			>
-				<Button name="link" aria-label="contact section link" size="lg">Contact 👋</Button>
+				<Button
+					on:click={(e) => scrollToSection(e, 'contact-section', 0)}
+					name="link"
+					aria-label="contact section link"
+					size="lg">Contact 👋</Button
+				>
 			</div>
 		</section>
 
@@ -53,7 +59,7 @@
 		>
 			<div class="max-w-[1000px] rounded-md [perspective:2000px]">
 				<div
-					class="relative before:absolute before:-top-[2.5rem] before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0  before:[filter:blur(120px)] xl:before:-top-[5.5rem] xl:before:left-24"
+					class="relative before:absolute before:-top-[2.5rem] before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] xl:before:-top-[5.5rem] xl:before:left-24"
 				>
 					<div
 						class="rotate-20 relative -left-10 -top-20 mt-32 flex h-96 lg:mb-0 xl:-top-[11rem] xl:left-16"
@@ -193,4 +199,4 @@
 			</div>
 		</section>
 	</div>
-</div>
+</section>
