@@ -46,6 +46,7 @@
 
 		<div class="flex items-center justify-center gap-2">
 			<Button
+				title="Contact me for inquiries"
 				size="md"
 				name="contact-link"
 				aria-label="Contact me for inquiries"
@@ -90,6 +91,8 @@
 								isOpen = false;
 							}}
 							role="link"
+							title="Contact me for inquiries"
+						
 							aria-label="Link to contact section"
 							class="flex h-navigation-height w-full items-center border-b border-grey-dark px-4 text-lg transition-colors hover:text-grey"
 						>
