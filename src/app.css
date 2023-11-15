@@ -8,6 +8,8 @@ html {
 	font-family: "Montserrat Regular", sans-serif;
 }
 
+
+
 .rotate-20 {
 	transform: rotateY(15deg) rotateX(-15deg);
 	transform-style: preserve-3d;
