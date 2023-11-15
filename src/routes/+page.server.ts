@@ -7,6 +7,7 @@ import { SECRET_RESEND_API_KEY } from '$env/static/private';
 const resend = new Resend(SECRET_RESEND_API_KEY);
 const emailSchema = z.object({
 	name: z.string(),
+	
 	email: z.string().email('Please provide an valid email address'),
 	message: z.string().min(20, 'Please provide at least 20 characters long message')
 });
