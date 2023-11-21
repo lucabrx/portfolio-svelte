@@ -92,7 +92,7 @@
 					<div
 						class=" absolute right-2 top-0 z-20 mt-2 flex flex-wrap justify-end gap-2 md:mt-3 md:max-w-[360px]"
 					>
-						<Badge>{mainBadge}</Badge>
+						<Badge variant="default">{mainBadge}</Badge>
 						{#each badges as badge}
 							<Badge variant="secondary">
 								{badge}
