@@ -49,6 +49,8 @@
 				{...$constraints.name}
 				name="name"
 				type="text"
+				id="name"
+				autocomplete="name"
 				placeholder="Yana Doe"
 				aria-label="enter your name"
 				class={cn(
@@ -66,8 +68,10 @@
 				bind:value={$form.email}
 				name="email"
 				type="email"
+				id="email"
 				aria-label="enter your email"
 				placeholder="yanadoe@example.com"
+				autocomplete="email"
 				class={cn(
 					'bg-off-whit text-md rounded-md border-none p-2 text-grey-dark outline-none  transition-colors duration-300 focus:ring-2 focus:ring-[#4f46e5]'
 				)}
@@ -82,6 +86,7 @@
 				{...$constraints.message}
 				bind:value={$form.message}
 				name="message"
+				id="message"
 				placeholder="Your amazing message..."
 				aria-label="enter your message"
 				class={cn(
