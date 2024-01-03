@@ -2,7 +2,6 @@
 	import { Icons } from './icons';
 	import Badge from './ui/badge/Badge.svelte';
 	import { buttonVariants } from './ui/button';
-	import Button from './ui/button/Button.svelte';
 
 	export let mainBadge: string;
 	export let badges: string[];
@@ -33,7 +32,7 @@
 			alt={title}
 			width={510}
 			height={286}
-			class="aspect-video h-full w-full"
+			class="aspect-video h-full w-full lg:h-fit lg:w-fit"
 		/>
 		<div class="absolute inset-0 bg-glass-gradient" />
 	</a>
