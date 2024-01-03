@@ -5,10 +5,8 @@
 
 html {
 	scroll-behavior: smooth;
-	font-family: "Montserrat Regular", sans-serif;
+	font-family: 'Montserrat Regular', sans-serif;
 }
-
-
 
 .rotate-20 {
 	transform: rotateY(15deg) rotateX(-15deg);
@@ -43,7 +41,7 @@ html {
 		@apply bg-background text-off-white;
 	}
 	body {
-		@apply bg-page-gradient;
+		@apply flex min-h-screen flex-col bg-page-gradient;
 	}
 }
 

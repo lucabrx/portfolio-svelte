@@ -87,8 +87,8 @@
 			bind:this={scrollContainer}
 			class="hide-scrollbar flex transform gap-4 overflow-x-scroll px-5 py-6 transition-transform md:gap-7 md:px-0"
 		>
-			{#each projects as { title, description, image, badges, mainBadge, link }}
-				<ProjectCard {title} {description} {image} {badges} {mainBadge} {link} />
+			{#each projects as { title, description, image, badges, mainBadge, link, id, github }}
+				<ProjectCard {title} {description} {image} {badges} {mainBadge} {link} {github} />
 			{/each}
 		</div>
 		<button

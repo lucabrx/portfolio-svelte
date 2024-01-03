@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Icons } from './icons';
 	import Badge from './ui/badge/Badge.svelte';
 	import { buttonVariants } from './ui/button';
 	import Button from './ui/button/Button.svelte';
@@ -9,6 +10,7 @@
 	export let title: string;
 	export let description: string;
 	export let link: string;
+	export let github: string;
 </script>
 
 <div
@@ -24,16 +26,33 @@
 			</Badge>
 		{/each}
 	</div>
-	<div class="relative w-full shadow-secondary">
-		<img src={image} alt={title} width={510} height={286} class="aspect-video w-full  h-full" />
+	<a href={link} class="relative w-full shadow-secondary cursor-pointer">
+		<img
+			data-flip-id="cover-{title}"
+			src={image}
+			alt={title}
+			width={510}
+			height={286}
+			class="aspect-video h-full w-full"
+		/>
 		<div class="absolute inset-0 bg-glass-gradient" />
-	</div>
+	</a>
 	<div class="flex h-fit flex-col justify-between px-4">
-		<h2 class="text-xl text-off-white md:text-2xl">{title}</h2>
+		<h2 data-flip-id="title-{title}" class="text-xl text-off-white md:text-2xl">{title}</h2>
 		<p class="md:text-md mt-1 text-sm text-off-white/70">{description}</p>
 
 		<div class="mt-4 flex w-full justify-end gap-3">
-			<Button variant="github" size="md" class="w-full md:w-auto md:px-6">Details</Button>
+			<a
+				href={github}
+				class={buttonVariants({
+					variant: 'github',
+					size: 'md',
+					class: 'w-full md:w-auto md:px-6'
+				})}
+			>
+				<Icons.Github class="mr-2 h-5 w-5" />
+				Github</a
+			>
 			<a
 				href={link}
 				class={buttonVariants({

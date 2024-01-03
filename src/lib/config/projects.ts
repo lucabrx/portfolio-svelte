@@ -35,10 +35,10 @@ export const projects: Project[] = [
 		description:
 			'Collection of tools for web developers and design, with ability to send us your tool for showcase',
 		image: webDevTools,
-		link: 'https://wd-tool.vercel.app/',
-		github: 'https://github.com/lucabrx/wd-tool',
+		link: 'https://www.web-dev-tools.xyz/',
+		github: 'https://github.com/lucabrx/web-dev-tools-frontend',
 		mainBadge: 'NextJS',
-		badges: ['TypeScript', 'TailwindCSS', 'NextAuth', 'Drizzle', 'S3']
+		badges: ['TypeScript', 'Golang', 'Postgres', 'AWS', 'TailwindCSS']
 	},
 	{
 		id: 3,
@@ -46,7 +46,7 @@ export const projects: Project[] = [
 		description:
 			'Blog with ability to create,edit,delete post and fresh news from around the world with comments',
 		image: voxPopuli,
-		link: 'https://vox-populiv3.vercel.app/',
+		link: 'https://www.web-dev-tools.xyz/',
 		github: 'https://github.com/lucabrx/vox-populiv3',
 		mainBadge: 'NextJS',
 		badges: ['TypeScript', 'Drizzle', 'TailwindCSS', 'NextAuth', 'Planetscale']
@@ -68,10 +68,10 @@ export const projects: Project[] = [
 		description:
 			'Airbnb clone with authentication ,ability to create property or to book place to stay and more ',
 		image: airBnb,
-		link: 'https://airbnb-clone-zeta-lime.vercel.app/',
-		github: 'https://github.com/lucabrx/airbnb-clone',
+		link: 'https://air-bnb-client-gules.vercel.app/',
+		github: 'https://github.com/lucabrx/air-bnb-client',
 		mainBadge: 'NextJS',
-		badges: ['TypeScript', 'TailwindCSS', 'NextAuth', 'Prisma']
+		badges: ['Golang', 'TypeScript', 'TailwindCSS', 'Postgres', 'AWS']
 	},
 	{
 		id: 99,

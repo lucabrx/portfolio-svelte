@@ -6,6 +6,7 @@ export const frontendTools = [
 ];
 export const backendTools = [
 	{ text: 'Golang', Icon: Icons.Golang },
+	{ text: 'Springboot', Icon: Icons.Spring },
 	{ text: 'Node', Icon: Icons.Node },
 	{ text: 'SQL', Icon: Icons.Sql },
 	{ text: 'Docker', Icon: Icons.Docker },

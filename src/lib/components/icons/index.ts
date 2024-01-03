@@ -19,9 +19,11 @@ import Figma from '$lib/components/icons/Figma.svelte';
 import Sql from '$lib/components/icons/Sql.svelte';
 import Golang from '$lib/components/icons/Golang.svelte';
 import Aws from '$lib/components/icons/Aws.svelte';
+import Spring from '$lib/components/icons/Spring.svelte';
 export const Icons = {
 	Menu,
 	X,
+	Spring,
 	ChevronUp,
 	Facebook,
 	Telegram: Send,
