@@ -18,25 +18,27 @@
 	let voxPopuliRect: DOMRect | null = null;
 
 	onMount(() => {
-    const images = document.querySelectorAll('article');
-    const totalImages = images.length;
-    const delayPerImage = 0.22;
+		const images = document.querySelectorAll('#home-image');
+		const totalImages = images.length;
+		const initialDelay = 0.4;
+		const totalDelay = 2;
+		const delayPerImage = totalDelay / totalImages;
 
-    images.forEach((image, index) => {
-        const delay = (totalImages - index - 0.2) * delayPerImage;
+		images.forEach((image, index) => {
+			const delay = initialDelay + (totalImages - index - 1) * delayPerImage;
 
-        gsap.fromTo(
-            image,
-            { scale: 0.001 },
-            {
-                scale: 1, 
-                ease: 'elastic.out(1, 0.75)', 
-                duration: 2,
-                delay: delay
-            }
-        );
-    });
-});
+			gsap.fromTo(
+				image,
+				{ scale: 0.001 },
+				{
+					scale: 1,
+					ease: 'elastic.out(1, 0.75)',
+					duration: 2,
+					delay: delay
+				}
+			);
+		});
+	});
 </script>
 
 <section
@@ -87,6 +89,7 @@
 						class="rotate-20 relative -left-10 -top-20 mt-32 flex h-96 lg:mb-0 xl:-top-[10.5rem] xl:left-16"
 					>
 						<article
+							id="home-image"
 							class="absolute left-[120px] top-[200px] z-[40] flex flex-col [perspective:800px] hover:z-40 xl:left-[150px] xl:top-[230px]"
 						>
 							<a
@@ -120,6 +123,7 @@
 							</a>
 						</article>
 						<article
+							id="home-image"
 							class="absolute left-[-50px] top-[180px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[-60px] xl:top-[220px]"
 						>
 							<a
@@ -153,6 +157,7 @@
 							</a>
 						</article>
 						<article
+							id="home-image"
 							class="absolute left-[10px] top-[80px] z-20 flex flex-col [perspective:800px] hover:z-40 xl:top-[100px]"
 						>
 							<a
@@ -186,6 +191,7 @@
 							</a>
 						</article>
 						<article
+							id="home-image"
 							class="absolute left-[-20px] top-[55px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:left-[-30px] xl:top-[85px]"
 						>
 							<a
@@ -219,6 +225,7 @@
 							</a>
 						</article>
 						<article
+							id="home-image"
 							class="absolute left-[130px] top-[40px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:left-[180px] xl:top-[65px]"
 						>
 							<a
