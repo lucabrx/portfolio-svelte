@@ -18,25 +18,25 @@
 	let voxPopuliRect: DOMRect | null = null;
 
 	onMount(() => {
-		const images = document.querySelectorAll('article');
-		const totalImages = images.length;
-		const delayPerImage = 0.22;
+    const images = document.querySelectorAll('article');
+    const totalImages = images.length;
+    const delayPerImage = 0.22;
 
-		images.forEach((image, index) => {
-			const delay = (totalImages - index - 1) * delayPerImage;
+    images.forEach((image, index) => {
+        const delay = (totalImages - index - 0.2) * delayPerImage;
 
-			gsap.fromTo(
-				image,
-				{ scale: 0.001 },
-				{
-					scale: 1,
-					ease: 'elastic.out(1, 1.8, 0.8)',
-					duration: 2,
-					delay: delay
-				}
-			);
-		});
-	});
+        gsap.fromTo(
+            image,
+            { scale: 0.001 },
+            {
+                scale: 1, 
+                ease: 'elastic.out(1, 0.75)', 
+                duration: 2,
+                delay: delay
+            }
+        );
+    });
+});
 </script>
 
 <section
