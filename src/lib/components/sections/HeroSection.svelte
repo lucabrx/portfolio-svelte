@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { onDestroy, onMount } from 'svelte';
+	import gsap from 'gsap';
+
 	import Button from '$lib/components/ui/button/Button.svelte';
 
 	import jimmyDzomlia from '$lib/images/projects/jimmy-dzomlia.webp';
@@ -13,6 +16,27 @@
 	let quantaRect: DOMRect | null = null;
 	let webDevToolsRect: DOMRect | null = null;
 	let voxPopuliRect: DOMRect | null = null;
+
+	onMount(() => {
+    const images = document.querySelectorAll('article');
+    const totalImages = images.length;
+    const delayPerImage = 0.22;
+
+    images.forEach((image, index) => {
+        const delay = (totalImages - index - 0.2) * delayPerImage;
+
+        gsap.fromTo(
+            image,
+            { scale: 0.001 },
+            {
+                scale: 1, 
+                ease: 'elastic.out(1, 0.75)', 
+                duration: 2,
+                delay: delay
+            }
+        );
+    });
+});
 </script>
 
 <section
@@ -54,9 +78,7 @@
 			</div>
 		</section>
 
-		<section
-			class="mt-6 hidden animate-fade-in opacity-0 [--animation-delay:700ms] lg:mt-6 lg:block"
-		>
+		<section class="mt-6 hidden lg:mt-6 lg:block">
 			<div class="max-w-[1000px] rounded-md [perspective:2000px]">
 				<div
 					class="relative before:absolute before:-top-[2.5rem] before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] xl:before:-top-[5.5rem] xl:before:left-24"
@@ -64,6 +86,72 @@
 					<div
 						class="rotate-20 relative -left-10 -top-20 mt-32 flex h-96 lg:mb-0 xl:-top-[10.5rem] xl:left-16"
 					>
+						<article
+							class="absolute left-[120px] top-[200px] z-[40] flex flex-col [perspective:800px] hover:z-40 xl:left-[150px] xl:top-[230px]"
+						>
+							<a
+								href="https://wd-tool.vercel.app/"
+								aria-label="link to Web Dev Tools project"
+								on:mouseleave={() => (webDevToolsRect = null)}
+								on:mouseenter={(e) => (webDevToolsRect = e.currentTarget.getBoundingClientRect())}
+								on:mousemove={(e) => {
+									if (!webDevToolsRect) return;
+									const x = e.clientX - webDevToolsRect.left;
+									const y = e.clientY - webDevToolsRect.top;
+									const xPercentage = x / webDevToolsRect.width;
+									const yPercentage = y / webDevToolsRect.height;
+									const xRotation = (xPercentage - 0.5) * 20;
+									const yRotation = (0.5 - yPercentage) * 20;
+
+									e.currentTarget.style.setProperty('--x-rotation', `${yRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--y-rotation', `${xRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
+									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
+								}}
+								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
+							>
+								<img
+									src={webDevTools}
+									alt="Web Dev Tools Project"
+									class="rounded-md"
+									width="290"
+									height="164"
+								/>
+							</a>
+						</article>
+						<article
+							class="absolute left-[-50px] top-[180px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[-60px] xl:top-[220px]"
+						>
+							<a
+								href="https://vox-populiv3.vercel.app/"
+								aria-label="link to Vox Populi project"
+								on:mouseleave={() => (voxPopuliRect = null)}
+								on:mouseenter={(e) => (voxPopuliRect = e.currentTarget.getBoundingClientRect())}
+								on:mousemove={(e) => {
+									if (!voxPopuliRect) return;
+									const x = e.clientX - voxPopuliRect.left;
+									const y = e.clientY - voxPopuliRect.top;
+									const xPercentage = x / voxPopuliRect.width;
+									const yPercentage = y / voxPopuliRect.height;
+									const xRotation = (xPercentage - 0.5) * 20;
+									const yRotation = (0.5 - yPercentage) * 20;
+
+									e.currentTarget.style.setProperty('--x-rotation', `${yRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--y-rotation', `${xRotation * 1.5}deg`);
+									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
+									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
+								}}
+								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
+							>
+								<img
+									src={voxPopuli}
+									alt="Vox Populi Project"
+									class="rounded-md"
+									width="290"
+									height="164"
+								/>
+							</a>
+						</article>
 						<article
 							class="absolute left-[10px] top-[80px] z-20 flex flex-col [perspective:800px] hover:z-40 xl:top-[100px]"
 						>
@@ -157,72 +245,6 @@
 								<img
 									src={quanta}
 									alt="Quanta Project"
-									class="rounded-md"
-									width="290"
-									height="164"
-								/>
-							</a>
-						</article>
-						<article
-							class="absolute left-[-50px] top-[180px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[-60px] xl:top-[220px]"
-						>
-							<a
-								href="https://vox-populiv3.vercel.app/"
-								aria-label="link to Vox Populi project"
-								on:mouseleave={() => (voxPopuliRect = null)}
-								on:mouseenter={(e) => (voxPopuliRect = e.currentTarget.getBoundingClientRect())}
-								on:mousemove={(e) => {
-									if (!voxPopuliRect) return;
-									const x = e.clientX - voxPopuliRect.left;
-									const y = e.clientY - voxPopuliRect.top;
-									const xPercentage = x / voxPopuliRect.width;
-									const yPercentage = y / voxPopuliRect.height;
-									const xRotation = (xPercentage - 0.5) * 20;
-									const yRotation = (0.5 - yPercentage) * 20;
-
-									e.currentTarget.style.setProperty('--x-rotation', `${yRotation * 1.5}deg`);
-									e.currentTarget.style.setProperty('--y-rotation', `${xRotation * 1.5}deg`);
-									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
-									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
-								}}
-								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
-							>
-								<img
-									src={voxPopuli}
-									alt="Vox Populi Project"
-									class="rounded-md"
-									width="290"
-									height="164"
-								/>
-							</a>
-						</article>
-						<article
-							class="absolute left-[120px] top-[200px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[150px] xl:top-[200px]"
-						>
-							<a
-								href="https://wd-tool.vercel.app/"
-								aria-label="link to Web Dev Tools project"
-								on:mouseleave={() => (webDevToolsRect = null)}
-								on:mouseenter={(e) => (webDevToolsRect = e.currentTarget.getBoundingClientRect())}
-								on:mousemove={(e) => {
-									if (!webDevToolsRect) return;
-									const x = e.clientX - webDevToolsRect.left;
-									const y = e.clientY - webDevToolsRect.top;
-									const xPercentage = x / webDevToolsRect.width;
-									const yPercentage = y / webDevToolsRect.height;
-									const xRotation = (xPercentage - 0.5) * 20;
-									const yRotation = (0.5 - yPercentage) * 20;
-
-									e.currentTarget.style.setProperty('--x-rotation', `${yRotation * 1.5}deg`);
-									e.currentTarget.style.setProperty('--y-rotation', `${xRotation * 1.5}deg`);
-									e.currentTarget.style.setProperty('--x', `${xPercentage * 300}%`);
-									e.currentTarget.style.setProperty('--y', `${yPercentage * 300}%`);
-								}}
-								class="w-[240px] cursor-pointer rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] xl:w-[290px]"
-							>
-								<img
-									src={webDevTools}
-									alt="Web Dev Tools Project"
 									class="rounded-md"
 									width="290"
 									height="164"
