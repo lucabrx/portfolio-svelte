@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte';
-	import gsap from 'gsap';
-
 	import Button from '$lib/components/ui/button/Button.svelte';
 
 	import jimmyDzomlia from '$lib/images/projects/jimmy-dzomlia.webp';
@@ -16,29 +13,6 @@
 	let quantaRect: DOMRect | null = null;
 	let webDevToolsRect: DOMRect | null = null;
 	let voxPopuliRect: DOMRect | null = null;
-
-	onMount(() => {
-		const images = document.querySelectorAll('#home-image');
-		const totalImages = images.length;
-		const initialDelay = 0.4;
-		const totalDelay = 2;
-		const delayPerImage = totalDelay / totalImages;
-
-		images.forEach((image, index) => {
-			const delay = initialDelay + (totalImages - index - 1) * delayPerImage;
-
-			gsap.fromTo(
-				image,
-				{ scale: 0.001 },
-				{
-					scale: 1,
-					ease: 'elastic.out(1, 0.75)',
-					duration: 2,
-					delay: delay
-				}
-			);
-		});
-	});
 </script>
 
 <section
@@ -81,7 +55,9 @@
 		</section>
 
 		<section class="mt-6 hidden lg:mt-6 lg:block">
-			<div class="max-w-[1000px] rounded-md [perspective:2000px]">
+			<div
+				class="max-w-[1000px] rounded-md [perspective:2000px]"
+			>
 				<div
 					class="relative before:absolute before:-top-[2.5rem] before:left-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] xl:before:-top-[5.5rem] xl:before:left-24"
 				>
@@ -90,7 +66,7 @@
 					>
 						<article
 							id="home-image"
-							class="absolute left-[120px] top-[200px] z-[40] flex flex-col [perspective:800px] hover:z-40 xl:left-[150px] xl:top-[230px]"
+							class="absolute left-[120px] top-[200px] z-[40] flex animate-fade-in flex-col opacity-0 [--animation-delay:1400ms] [perspective:800px] hover:z-40 xl:left-[150px] xl:top-[230px]"
 						>
 							<a
 								href="https://wd-tool.vercel.app/"
@@ -116,7 +92,7 @@
 								<img
 									src={webDevTools}
 									alt="Web Dev Tools Project"
-									class="rounded-md"
+									class="rounded-md opacity-100"
 									width="290"
 									height="164"
 								/>
@@ -124,7 +100,7 @@
 						</article>
 						<article
 							id="home-image"
-							class="absolute left-[-50px] top-[180px] z-30 flex flex-col [perspective:800px] hover:z-40 xl:left-[-60px] xl:top-[220px]"
+							class="absolute left-[-50px] top-[180px] z-30 flex animate-fade-in flex-col opacity-0 [--animation-delay:1400ms] [perspective:800px] hover:z-40 xl:left-[-60px] xl:top-[220px]"
 						>
 							<a
 								href="https://vox-populiv3.vercel.app/"
@@ -150,7 +126,7 @@
 								<img
 									src={voxPopuli}
 									alt="Vox Populi Project"
-									class="rounded-md"
+									class="rounded-md opacity-100"
 									width="290"
 									height="164"
 								/>
@@ -158,7 +134,7 @@
 						</article>
 						<article
 							id="home-image"
-							class="absolute left-[10px] top-[80px] z-20 flex flex-col [perspective:800px] hover:z-40 xl:top-[100px]"
+							class="absolute left-[10px] top-[80px] z-20 flex animate-fade-in flex-col opacity-0 [perspective:800px] [--animation-delay:1000ms] hover:z-40 xl:top-[100px]"
 						>
 							<a
 								href="https://fitness-coach-jimmy-dzomlia.vercel.app/"
@@ -184,7 +160,7 @@
 								<img
 									src={jimmyDzomlia}
 									alt="Jimmy Dzomlia Project"
-									class="rounded-md"
+									class="rounded-md opacity-100"
 									width="389"
 									height="384"
 								/>
@@ -192,7 +168,7 @@
 						</article>
 						<article
 							id="home-image"
-							class="absolute left-[-20px] top-[55px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:left-[-30px] xl:top-[85px]"
+							class="absolute left-[-20px] top-[55px] z-10 flex animate-fade-in flex-col opacity-0 [perspective:800px] [--animation-delay:600ms] hover:z-40 xl:left-[-30px] xl:top-[85px]"
 						>
 							<a
 								href="https://icon-ai-ughw.vercel.app/"
@@ -218,7 +194,7 @@
 								<img
 									src={iconAi}
 									alt="Icon AI Project"
-									class="rounded-md"
+									class="rounded-md opacity-100"
 									width="270px"
 									height="152"
 								/>
@@ -226,7 +202,7 @@
 						</article>
 						<article
 							id="home-image"
-							class="absolute left-[130px] top-[40px] z-10 flex flex-col [perspective:800px] hover:z-40 xl:left-[180px] xl:top-[65px]"
+							class="absolute left-[130px] top-[40px] z-10 flex animate-fade-in flex-col opacity-0 [perspective:800px] [--animation-delay:600ms] hover:z-40 xl:left-[180px] xl:top-[65px]"
 						>
 							<a
 								href="https://quanta-ai-next.vercel.app/"
@@ -252,7 +228,7 @@
 								<img
 									src={quanta}
 									alt="Quanta Project"
-									class="rounded-md"
+									class="rounded-md opacity-100"
 									width="290"
 									height="164"
 								/>

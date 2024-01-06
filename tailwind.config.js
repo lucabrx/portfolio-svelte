@@ -77,10 +77,11 @@ module.exports = {
 						opacity: 0,
 						'animation-timing-function': 'cubic-bezier(0.74,0.25,0.76,1)'
 					},
-					'10%': {
+					'40%': {
 						opacity: 1,
 						'animation-timing-function': 'cubic-bezier(0.12,0.01,0.08,0.99)'
 					},
+
 					'100%': {
 						opacity: 0.2
 					}
